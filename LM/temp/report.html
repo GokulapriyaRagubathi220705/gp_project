@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Report</title>
+    <link rel="stylesheet" href="{% static 'report.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Optional: Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/add_and_report/" method="post">
+            {% csrf_token %}
+            <h1>Book Report</h1>
+            <div class="form">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>BOOKNAME</th>
+                        <th>AUTHOR</th>
+                        <th>BOOK ID</th>
+                        <th>LENDED BY (STUDENT NAME)</th>
+                        <th>REGISTER NUMBER</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                        <tr>
+                            <td>{{ book.BOOKNAME }}</td>
+                            <td>{{ book.AUTHORNAME }}</td>
+                            <td>{{ book.BOOK_ID }}</td>
+                            {% if book.lended_by %}
+                                <td>{{ book.lended_by.student_name }}</td>
+                                <td>{{ book.lended_by.student_reg_no }}</td>
+                            {% else %}
+                                <td>-</td>
+                                <td>-</td>
+                            {% endif %}
+                            <td>{{ book.STATUS }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table><br><br>
+        </div>
+        <button class="back" name="adb" value="bk"> Back</button>
+        </form>
+    </div>
+</body>
+</html>

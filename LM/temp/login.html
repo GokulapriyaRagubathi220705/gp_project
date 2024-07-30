@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Optional: Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="hed">LOGIN</h1>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <label for="" class="label">NAME :</label><br>
+            <input type="text" name="name" class="input"><br><br>
+            <label for="" class="label">REGISTER NUMBER :</label><br>
+            <input type="number" name="reg" class="input"><br><br>
+            <button name="btn" value="check" class="button">Login</button>
+            <button class="back" name="btn" value="back">Back</button>
+        </form>
+        <h2>{{msg}}</h2>
+    </div>
+</body>
+</html>

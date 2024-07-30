@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lend or Return</title>
+    <link rel="stylesheet" href="{% static 'lend_or_return.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Optional: Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/lendReturn/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="reg" value="{{ reg }}">
+            <div class="slide">
+                <div class="card-list">
+                    <div class="card-item">
+                        <h2 class="process1">Lend Book</h2>
+                        <img src="{% static 'box1.avif' %}" alt="" class="book1">
+                        <button type="submit" name="len" value="lend" class="lend">Click</button><br><br>
+                    </div>
+                    <div class="card-item">
+                        <h2>Return Book</h2>
+                        <img src="{% static 'bookcard2.avif' %}" alt="" class="book1">
+            <button type="submit" name="len" value="return" class="return">Click</button>
+        </div>
+    </div>
+</div>
+            <button class="back" name="len" value="back">back</button>
+        </form>
+    </div>
+</body>
+</html>

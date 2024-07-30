@@ -1,0 +1,57 @@
+body{
+    background-image: url(student.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+button {
+    color: black;
+    border: none;
+    padding: 20px;  /* Increased padding to increase size */
+    font-size: 20px;     /* Larger font size */
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, border 0.3s; /* Smoother transition for border and transform */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+.add_book {
+    background: linear-gradient(to right, rgb(131, 173, 171), rgb(208, 221, 221));
+    margin-top: 20%;
+}
+
+.report {
+    background: linear-gradient(to right, rgb(112, 160, 157), rgb(90, 250, 255));
+    margin-top: 5%;
+}
+
+.signup, .login {
+    background: linear-gradient(to right, rgb(233, 236, 12), rgb(255, 196, 1)); /* New gradient for signup/login buttons */
+    margin-left: 40%;
+    border: none;
+    font-size: 24px; 
+    border-radius: 20px; /* Adjusted border-radius for more subtle roundness */
+    padding: 10px ;  /* Increased padding for larger button size */
+    margin-top: 20px;    /* Added margin-top */
+    font-weight: bold;
+}
+.back{
+    background: linear-gradient(to right, rgb(241, 209, 161), rgb(243, 207, 153));
+    margin-left: 80%;
+    margin-top: 30%;
+    border-radius: 20px; 
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+}
+button:hover {
+    transform: scale(1.1);
+}
+

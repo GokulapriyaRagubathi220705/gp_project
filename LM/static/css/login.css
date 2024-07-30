@@ -1,0 +1,96 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url(login.jpg);        
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hed{
+    margin-top: 5%;
+    color:rgb(255, 196, 0);
+    font-size: 1.5cm;
+}
+
+form {
+    margin: 0 auto; /* Center the form */
+    width: 30%; /* Default width */
+    padding: 50px; /* Add some padding */   
+    margin-top: 5%;
+    font-family:'Times New Roman', Times, sans-serif;
+    border-radius: 40px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: rgba(255, 255, 255, 0.712);
+    border-color: rgba(243, 95, 144, 0.966);
+    border-style:solid;
+    margin-left: 37%;
+    color:  rgb(70, 139, 230);
+}
+.input,.label{
+    width: 100%;
+    border-color: rgb(70, 139, 230);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: larger;
+    
+}
+.input:focus{
+    outline: none;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto; /* Center .box within the form */
+    margin-bottom: 5%;
+    width: 80%; /* Ensure .box is not too wide */
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    form {
+        width: 70%; /* Adjust width for tablets */
+    }
+
+    .box {
+        width: 90%; /* Adjust width for tablets */
+    }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+    form {
+        width: 90%; /* Adjust width for mobile phones */
+        margin: 10px; /* Add some margin around the form */
+    }
+
+    .box {
+        width: 100%; /* Adjust width for mobile phones */
+    }
+}
+
+.button {
+    border-radius: 5%;
+    padding: 10px 20px; /* Increased padding for larger button size */
+    font-size:larger; /* Larger font size */
+    background-color: rgb(70, 139, 230);
+    color: white;
+    border-radius: 25px;
+    border-color: white;
+    width: 100%;
+    margin-bottom: 8%;
+}
+.back{
+    border-radius: 5%;
+    padding: 10px 20px; /* Increased padding for larger button size */
+    font-size:larger; /* Larger font size */
+    background-color: rgb(212, 158, 7);
+    color: white;
+    border-radius: 25px;
+    border-color: white;
+    width: 100%;
+}
+
+
+

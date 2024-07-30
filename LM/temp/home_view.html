@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="{% static 'home_view.css' %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Optional: Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <form action="/choose_admin_or_student/" method="post">
+            {% csrf_token %}
+        <h1 class="head">Library Management</h1>
+    <button class="admin" name="adm" value="admi">Click</button>
+    <button class="student" name="adm" value="stu">Click</button>
+    
+</form>
+</div>
+</body>
+</html>

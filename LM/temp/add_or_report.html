@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookadd</title>
+    <link rel="stylesheet" href="{% static 'add_or_report.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Optional: Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/add_and_report/" method="post">
+            {% csrf_token %}
+            <div class="slide">
+                <div class="card-list">
+                    <div class="card-item">
+                        <h2 class="process1">ADD BOOK</h2>
+                        <img src="{% static 'box1.avif' %}" alt="" class="book1">
+                        <button name="adb" value="addb" class="add_book">Add Book</button>
+                    </div>
+                    <div class="card-item">
+                        <h2>REPORT BOOK</h2>
+                        <img src="{% static 'bookcard2.avif' %}" alt="" class="book1">
+                        <button name="adb" value="report" class="report">Report</button>
+                    </div>
+                </div>
+            </div>
+            <button name="adb" value="back" class="back">back</button>
+        </form>
+    </div>
+</body>
+</html>

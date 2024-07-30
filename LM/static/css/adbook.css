@@ -1,0 +1,43 @@
+body{
+    background-image: url(adbook.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    color:black;
+    margin-top: 20%;
+    margin-left: 28%;    
+    font-style: italic;
+    font-weight: bolder;
+    font-size:larger;                                                                                                                                             
+}
+.box{
+    margin-top:5%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    
+}
+h1{
+    color: red;
+    margin-right:42%;
+}
+input{
+    width: 45%;
+    height: 50px;
+}
+.add,.back{
+    color: white;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.836);
+    width: 20%;
+    height: 50px;
+}
+button:hover{
+    border-style: double;
+    border-color: white;
+}
+h4{
+    color:green;
+    margin-right:42%;
+}
+

@@ -1,0 +1,128 @@
+body {
+    background-image: url('report.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin-right: 80%;
+}
+
+.container {
+    margin-top: 2%;
+}
+
+.form {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: white;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.952);
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific class for Lend Book form without scrollbar */
+.form-lend {
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.966);
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table-container {
+    flex: 1;
+    margin-right: 20px;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust the height as needed */
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    position: sticky;
+    top: 0;
+    background-color: rgba(148, 146, 146, 0.973);
+    z-index: 1;
+    color: white;
+}
+
+.form-container {
+    flex: 0 0 300px;
+    background-color: rgba(255, 255, 255, 0.925);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+h3{
+    color: white;
+    background-color: rgb(7, 112, 138);
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    border-style: none;
+    width: 49%;
+}
+
+button:hover {
+    border-style: double;
+    border-color: white;
+}
+
+.lend {
+    background: linear-gradient(to right, rgb(131, 132, 133), rgb(48, 49, 49));
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-color: white;
+}
+
+.back {
+    background: linear-gradient(to right, rgb(131, 132, 133), rgb(48, 49, 49));
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-color: white;
+}
+h4{
+    color: green;
+    font-weight: bold;
+}
+h2{
+    margin-left: 25%;
+    color: red;
+}
+.error{
+    background-color: white;
+    color: red;
+    border-color: white;
+    border-style: solid;
+}

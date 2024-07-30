@@ -1,0 +1,89 @@
+body {
+    background-image: url(add_or_report.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card-list {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: nowrap; /* Prevent wrapping to new line */
+    max-width: 1000px; /* Adjust based on your design needs */
+    margin: 0 auto; /* Center the card list */
+    margin-left: 38%;
+}
+
+.card-item {
+    background: #ffffffe3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 230px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-item img.book1{
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-item button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-item button.add_book {
+    background-color: #2878a7;
+}
+
+.card-item button.report {
+    background-color: #188686;
+}
+
+.card-item button:hover {
+    opacity: 0.8;
+}
+.back{
+    margin-left: 93%;
+    margin-top: 200px;
+    background-color: #42adf5;
+    padding: 10px;
+    width: 15%;
+    color: white;
+    border-radius: 20px;
+    border-color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}

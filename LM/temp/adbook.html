@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD BOOK</title>
+    <link rel="stylesheet" href="{% static 'adbook.css' %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Optional: Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/handle_added_books/" method="post">
+            {% csrf_token %}
+            <div class="box">
+            <label for="">Book Name :</label><br>
+            <input type="text" name="bname" placeholder="Enter Book Name"><br><br>
+             <label for="">Author Name :</label><br>
+             <input type="text" name="aname" placeholder=" Enter Author Name"><br><br>
+             <button name="btn" value="back" class="back">BACK</button>
+             <button name="btn" value="add" class="add">ADD</button><br>
+             <h4>{{msg}}</h4>
+             <h1>{{msg1}}</h1>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

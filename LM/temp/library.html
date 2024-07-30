@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Book</title>
+    <link rel="stylesheet" href="{% static 'lendbook.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Optional: Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Books</h1>
+        <form action="/lend_book/" method="post" class="form-lend">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="reg" value="{{ reg }}">
+            <div class="content">
+                <div class="table-container">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>BOOKNAME</th>
+                                <th>AUTHOR</th>
+                                <th>BOOK ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for book in books %}
+                                <tr>
+                                    <td>{{ book.BOOKNAME }}</td>
+                                    <td>{{ book.AUTHORNAME }}</td>
+                                    <td>{{ book.BOOK_ID }}</td>
+                                    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-container">
+                    <h3 class="hd">Lend Book</h3>
+                    <label for="nbook">Enter a Book Name</label><br>
+                    <input type="text" name="nbook"><br><br>
+                    <label for="bid">Enter a Book ID</label><br>
+                    <input type="number" name="bid" ><br><br>
+                    <label for="student_name">Enter Student Name</label><br>
+                    <input type="text" name="student_name" ><br><br>
+                    <label for="student_reg_no">Enter Student Register Number</label><br>
+                    <input type="text" name="student_reg_no"><br><br>
+                    <button type="submit" name="btn" value="bk" class="back">Back</button>
+                    <button type="submit" name="btn" value="le" class="lend">Lend</button> 
+                </div>
+            </div>
+        </form>
+        <h4>{{msg}}</h4>
+        <h3 class="error">{{msg2}}</h3>
+        <h3 class="error">{{msg5}}</h3>
+    </div>
+</body>
+</html>

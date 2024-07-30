@@ -1,0 +1,43 @@
+body {
+    background-image: url('report.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form {
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* Use 'auto', 'thin', or 'none' */
+    scrollbar-color: white; /* Thumb color, Track color */
+    height: 500px;
+    overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+    background-color: rgba(255, 255, 255, 0.897);
+    font-weight: bold;
+    position: relative; /* Added relative positioning */
+}
+
+.back {
+    margin-top: 2%;
+    margin-left: 10%;
+    background-color: rgb(12, 107, 161);
+    color: white;
+    font-size: larger;
+    width: 15%;
+    font-weight: bold;
+    border-radius: 30px;
+    border-color: white;
+    height: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky; /* Changed to sticky */
+    top: 0; /* Ensure it stays at the top */
+    background-color: rgba(148, 146, 146, 0.973); /* Optional: Add background to avoid overlap */
+    z-index: 1; /* Ensure it stays on top */
+    color: white;
+}
+

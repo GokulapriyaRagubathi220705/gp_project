@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Optional: Bootstrap theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Signup</h1>
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            <div class="box">
+                <div class="content">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" class="input" value="{{ form_data.name|default_if_none:'' }}">
+                    <p>{{msg}}</p>
+                    
+                    <label for="reg">Register Number:</label>
+                    <input type="number" name="reg" class="input" value="{{ form_data.reg|default_if_none:'' }}">
+                    <p>{{msg1}}</p>
+                    
+                    <label>Gender:</label><br>
+                    <input type="radio" value="Male" name="gender" class="radio1" {% if form_data.gender == "Male" %}checked{% endif %}> Male
+                    <input type="radio" value="Female" name="gender" class="radio2" {% if form_data.gender == "Female" %}checked{% endif %}> Female
+                    <input type="radio" value="Other" name="gender" class="radio3" {% if form_data.gender == "Other" %}checked{% endif %}> Other
+                    <p>{{msg5}}</p>
+                    
+                    <label for="dept">Department:</label><br>
+                    <input type="radio" value="ComputerScience" name="dept" class="radio4" {% if form_data.dept == "ComputerScience" %}checked{% endif %}> ComputerScience
+                    <input type="radio" value="ComputerApplication" name="dept" class="radio5" {% if form_data.dept == "ComputerApplication" %}checked{% endif %}> ComputerApplication<br>
+                    <input type="radio" value="BusinessAdministration" name="dept" class="radio6" {% if form_data.dept == "BusinessAdministration" %}checked{% endif %}> BusinessAdministration
+                    <input type="radio" value="DataScience" name="dept" class="radio7" {% if form_data.dept == "DataScience" %}checked{% endif %}> DataScience
+                    <p>{{msg3}}</p>
+                    
+                    <label for="eml">Email:</label>
+                    <input type="email" name="eml" class="input" value="{{ form_data.eml|default_if_none:'' }}">
+                    
+                    <label for="psw">Password:</label>
+                    <input type="password" name="psw" class="input" value="{{ form_data.psw|default_if_none:'' }}">
+                    <p>{{msg4}}</p>
+                    
+                    <button class="button" name="signup" value="back">back</button>
+                    <button class="button" name="signup" value="check">signup</button>
+                </div>
+            </div>
+        </form>
+        <h5>{{msg2}}</h5>
+    </div>
+</body>
+</html>

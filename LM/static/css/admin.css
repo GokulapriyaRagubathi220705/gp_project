@@ -1,0 +1,54 @@
+body{
+    background-image: url(admin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    color: black;
+    margin-left: 25%;
+    margin-top: 15%;
+    margin-right:25% ;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+    font-size: larger;
+    font-style: italic;
+    
+}
+.label,.input{
+    margin-left: 10%;
+}
+.input{
+    width: 53%;
+}
+.button{
+    margin-left: 28%;
+    border-radius: 30px;
+    border-color:black;
+}
+button {
+    /* background: linear-gradient(to right, rgb(47, 51, 53), rgb(187, 213, 218)); */
+    color: black;
+    font-size: 16px;
+    /* border-color: rgb(6, 160, 160); */
+    cursor: pointer;
+    font-weight: bold;
+    width: 20%;
+    /* background: linear-gradient(to right,rgb(18, 167, 18), rgb(76, 202, 76)); */
+    color: white;
+    height: 40px;
+    border-style: none;
+    /* background: linear-gradient(to right,rgb(106, 64, 139),rgb(89, 67, 110)); */
+    /* background-color: rgb(9, 75, 9); */
+    background: linear-gradient(to right,rgb(89, 67, 110),rgb(35, 69, 163));
+}
+ button:hover { 
+    /* background: linear-gradient(to right,rgb(89, 67, 110),rgb(35, 69, 163)); */
+    background: linear-gradient(to right,rgb(35, 69, 163),rgb(89, 67, 110));
+ } 
+ h1{
+    color:red;
+    text-align: center;
+    background-color: white;
+    margin-left: 35%;
+    margin-right: 40%;
+ }

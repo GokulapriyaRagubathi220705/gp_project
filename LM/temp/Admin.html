@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Optional: Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/admin/" method="post">
+            {% csrf_token %}
+            <label for="" class="label">Enter Admin ID :</label><br>
+            <input type="number" name="id" class="input"><br><br>
+            <label for="" class="label">Enter Admin Password :</label><br>
+            <input type="password" name="pass" class="input"><br><br>
+           
+            <button name="ad" value="enter" class="button">Submit</button>
+        </form><br>
+        <h1>{{msg}}</h1>
+    </div>
+</body>
+
+</html>

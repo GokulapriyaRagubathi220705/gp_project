@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Books</title>
+    <link rel="stylesheet" href="{% static 'return.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lended Books for Return</h1>
+        <form action="/return_book/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="reg" value="{{ reg }}">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>BOOKNAME</th>
+                        <th>AUTHOR</th>
+                        <th>BOOK ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in lent_books %}
+                        <tr>
+                            <td>{{ book.BOOKNAME }}</td>
+                            <td>{{ book.AUTHORNAME }}</td>
+                            <td>{{ book.BOOK_ID }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <label for="bid">Enter the Book Id to Return</label><br>
+            <input type="number" name="bid"><br><br>
+            <button name="bt" value="back" class="back">Back</button>
+            <button name="bt" value="return" class="return">Return</button>
+            {% if msg %}
+                <p>{{ msg }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

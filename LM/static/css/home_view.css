@@ -1,0 +1,46 @@
+body{
+    background-image: url(home_view.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+h1{
+    font-family: cursive;
+    text-align: center;
+}
+.head{
+    font-size: 1.7cm;
+}
+.admin{
+    margin-top: 26%;
+    background: linear-gradient(to right, rgba(11, 11, 218, 0.836), rgb(0, 102, 255), rgb(90, 77, 145));
+    border-color: rgb(6, 59, 59);
+    border-radius: 50px;
+    font-size: 0.5cm;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 0.8cm;
+
+}
+.student{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 43%;
+    font-size: 0.8cm;
+    background-color: white;
+    border-color: white;
+    border-radius: 50px;
+    /* padding: 40px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    
+}
+button:hover{
+    border: none;
+}

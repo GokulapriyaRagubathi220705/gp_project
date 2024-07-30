@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="{% static 'student.css' %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Optional: Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+        <h1>Student page</h1>
+        <div class="container">
+            <form action="/student/" method="post">
+                {% csrf_token %}
+    <button class="signup" name="btn" value="sign"> Signup </button><br>
+    <button class="login" name="btn" value="log"> Login </button>
+    <button class="back" name="btn" value="back">Back</button>
+</form>
+</div>
+</body>
+</html>
